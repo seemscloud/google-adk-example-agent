@@ -1,0 +1,5 @@
+ragEngines:
+  gitlab:
+    id: projects/prod-common-apps/locations/europe-west1/ragCorpora/2305843009213693952
+    ragTokK: 5
+    ragDistanceThreshold: 0.6
