@@ -7,10 +7,12 @@ rag_tools = build_rag_tools(_cfg)
 
 root_agent = Agent(
     model='gemini-2.5-flash',
-    name='root_agent',
-    description='Asystent RAG (odpowiada na podstawie korpusów z config.yaml).',
+    name='gitlab_mr',
+    description='RAG assistant that answers using corpora defined in config.yaml.',
     instruction=(
-        'Uzywaj RAG Enginge z tools do odpowiedzi na pytanie'
+        'Use retrieve_* RAG tools to fetch context for GitLab merge requests, commits, '
+        'and files. If no relevant context is found, politely say so. Keep answers '
+        'concise and readable, include brief quotes/citations when helpful.'
     ),
     tools=rag_tools,
 )
